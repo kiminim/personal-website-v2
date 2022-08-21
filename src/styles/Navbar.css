@@ -1,0 +1,15 @@
+.navigation {
+  background-color: hsl(19, 91%, 83%);
+  justify-content: space-between;
+  display: flex;
+  padding: 0 20px;
+}
+
+.logo {
+  cursor: pointer;
+  color: hsl(5, 31%, 39%);
+}
+
+.nav-menu {
+  display: inline-block;
+}
