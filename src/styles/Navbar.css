@@ -1,8 +1,14 @@
+* {
+  font-family: 'Comfortaa', cursive;
+  text-decoration: none;
+}
+
 .navigation {
   background-color: hsl(19, 91%, 83%);
   justify-content: space-between;
   display: flex;
   padding: 0 20px;
+  justify-content: space-between;
 }
 
 .logo {
@@ -11,5 +17,15 @@
 }
 
 .nav-menu {
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  list-style: none;
+  padding: 0 20px;
+}
+
+a:visited {
+  color: hsl(5, 31%, 39%);
 }
