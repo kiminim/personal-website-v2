@@ -3,12 +3,19 @@
   text-decoration: none;
 }
 
+html {
+  font-size: 16px;
+}
+
 .navigation {
   background-color: hsl(19, 91%, 83%);
   justify-content: space-between;
   display: flex;
+  height: 60px;
   padding: 0 20px;
   justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
 }
 
 .logo {
@@ -19,6 +26,7 @@
 .nav-menu {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .item {
@@ -26,6 +34,19 @@
   padding: 0 20px;
 }
 
+.icon {
+  padding-top: 4px;
+}
+
 a:visited {
   color: hsl(5, 31%, 39%);
+}
+
+@media only screen and (max-width: 700px) {
+  .navigation {
+    width: 700px;
+  }
+  .icon {
+    display: none;
+  }
 }
