@@ -16,6 +16,7 @@ html {
   justify-content: space-between;
   align-items: center;
   font-size: 1.25rem;
+  overflow: hidden;
 }
 
 .logo {
@@ -28,13 +29,18 @@ html {
   align-items: center;
 }
 
-.item {
+.nav-menu a {
   list-style: none;
   padding: 0 20px;
 }
 
 .icon {
   padding-top: 4px;
+}
+
+.hamburger {
+  color: hsl(5, 31%, 39%);
+  display: none;
 }
 
 a:visited {
@@ -45,11 +51,23 @@ a:hover {
   color: hsl(30, 100%, 97%);
 }
 
-@media only screen and (max-width: 700px) {
-  .navigation {
-    width: 700px;
-  }
-  .icon {
+@media only screen and (max-width: 800px) {
+  .nav-menu a {
     display: none;
+  }
+  a.hamburger {
+    display: block;
+  }
+
+  .nav-menu.responsive {position: relative;}
+  .nav-menu.responsive a.hamburger {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav-menu.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
   }
 }
