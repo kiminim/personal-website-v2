@@ -11,28 +11,27 @@ html {
 
 .navigation {
   background-color: hsl(19, 91%, 83%);
-  justify-content: space-between;
   display: flex;
   height: 60px;
   padding: 0 20px;
   justify-content: space-between;
   align-items: center;
   font-size: 1.25rem;
-  overflow: hidden;
-}
-
-.logo {
+  position: relative;
   color: hsl(5, 31%, 39%);
 }
 
-.nav-menu {
+.nav-menu ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
+.nav-menu li {
+  list-style-type: none;
+}
+
 .nav-menu a {
-  list-style: none;
   padding: 0 20px;
 }
 
@@ -41,7 +40,6 @@ html {
 }
 
 .hamburger {
-  color: hsl(5, 31%, 39%);
   display: none;
 }
 
@@ -53,23 +51,35 @@ a:hover {
   color: hsl(30, 100%, 97%);
 }
 
-@media only screen and (max-width: 800px) {
-  .nav-menu a {
+@media only screen and (max-width: 768px) {
+  .nav-menu ul {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: hsl(19, 91%, 83%);
     display: none;
   }
-  a.hamburger {
-    display: block;
+  .nav-menu li {
+    text-align: center;
+    margin: 20px 0;
   }
 
-  .nav-menu.responsive {position: relative;}
-  .nav-menu.responsive a.hamburger {
-    position: absolute;
-    right: 0;
-    top: 0;
+  .nav-menu li a {
+    width: 100%;
+    padding: 1.5rem 2rem;
   }
-  .nav-menu.responsive a {
-    float: none;
+
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+  }
+
+  .nav-menu.expanded ul {
     display: block;
-    text-align: left;
   }
 }
