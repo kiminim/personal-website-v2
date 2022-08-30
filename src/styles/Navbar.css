@@ -11,7 +11,6 @@ html {
 
 .navigation {
   background-color: hsl(19, 91%, 83%);
-  justify-content: space-between;
   display: flex;
   height: 60px;
   padding: 0 20px;
@@ -53,23 +52,26 @@ a:hover {
   color: hsl(30, 100%, 97%);
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 840px) {
   .nav-menu a {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: hsl(19, 91%, 83%);
     display: none;
   }
-  a.hamburger {
-    display: block;
+
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
   }
 
-  .nav-menu.responsive {position: relative;}
-  .nav-menu.responsive a.hamburger {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .nav-menu.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
+  .nav-menu.expanded a {
+    display: flex;
   }
 }
