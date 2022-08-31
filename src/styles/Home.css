@@ -14,14 +14,50 @@
   width: 300px;
 }
 
-.greeting {
+.text {
   width: 60%;
-  text-align: justify;
-  font-size: large;
+  display: flex;
+  flex-direction: column;
+}
+
+.greeting {
+  text-align: start;
+  font-size: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+}
+
+.button:hover {
+  color: hsl(30, 100%, 97%);
+}
+
+.button a {
+  background-color: hsl(19, 91%, 83%);
+  font-size: 1.25rem;
+  padding: 1rem;
+}
+
+.arrow {
+  padding-left: 2rem;
+}
+
+.arrow:hover {
+  color: hsl(30, 100%, 97%);;
 }
 
 @media only screen and (max-width: 768px) {
   .intro {
     flex-direction: column;
+  }
+
+  .text {
+    align-items: center;
+  }
+  .greeting {
+    text-align: justify;
   }
 }
